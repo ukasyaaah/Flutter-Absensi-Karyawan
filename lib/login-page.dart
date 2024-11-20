@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
                 TextField(),
                 SizedBox(height: 20),
                 Text('Password'),
-                TextField(),
+                TextField(obscureText: true,),
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
