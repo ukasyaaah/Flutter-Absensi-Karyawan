@@ -14,19 +14,26 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(50.0),
           child: Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Center(child: Text('LOGIN')),
+                Center(
+                    child: Text('LOGIN',
+                        style: TextStyle(
+                          color: Colors.blue[800],
+                          fontWeight: FontWeight.bold,
+                        ))),
                 SizedBox(height: 20),
                 Text('Email'),
                 TextField(),
                 SizedBox(height: 20),
                 Text('Password'),
-                TextField(obscureText: true,),
+                TextField(
+                  obscureText: true,
+                ),
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
@@ -35,7 +42,11 @@ class _LoginPageState extends State<LoginPage> {
                             MaterialPageRoute(builder: (context) => HomePage()))
                         .then((value) => (value));
                   },
-                  child: Text('Masuk'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue[800],
+                    padding: EdgeInsets.all(18),
+                  ),
+                  child: Text('Masuk', style: TextStyle(color: Colors.white)),
                 ),
               ],
             ),
